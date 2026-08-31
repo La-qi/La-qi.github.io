@@ -50,19 +50,11 @@ a:hover {
     font-weight: 600;
     color: #333;
     font-size: 1.05em;
-}
-
-.nav-content a {
-    color: #666;
-    font-size: 0.95em;
     padding: 4px 0;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s ease;
 }
 
-.nav-content a:hover {
+.nav-home:hover {
     color: #0066cc;
-    border-bottom-color: #0066cc;
     text-decoration: none;
 }
 

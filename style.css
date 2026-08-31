@@ -1,313 +1,305 @@
-/* Reset and Base Styles */
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 a {
     color: #0066cc;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 a:hover {
     color: #0052a3;
+    text-decoration: underline;
 }
 
-/* Navigation Bar */
+/* Navigation */
 .navbar {
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #ddd;
-    padding: 0;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
+    padding: 0;
 }
 
-.nav-container {
-    max-width: 1200px;
+.nav-content {
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 14px 20px;
+    gap: 30px;
 }
 
-.nav-brand {
+.nav-home {
     font-weight: 600;
-    font-size: 1.1em;
     color: #333;
-    padding: 12px 0;
-    margin-right: 30px;
-    border-right: 1px solid #ddd;
-    padding-right: 30px;
+    font-size: 1.05em;
 }
 
-.nav-item {
-    padding: 12px 15px;
-    color: #333;
+.nav-content a {
+    color: #666;
     font-size: 0.95em;
-    transition: background-color 0.3s ease;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
 }
 
-.nav-item:hover {
-    background-color: #eee;
+.nav-content a:hover {
+    color: #0066cc;
+    border-bottom-color: #0066cc;
     text-decoration: none;
 }
 
-/* Main Container - Two Column Layout */
-.main-container {
-    max-width: 1200px;
+/* Container */
+.container {
+    max-width: 900px;
     margin: 0 auto;
-    display: flex;
-    padding: 30px 20px;
-    gap: 50px;
+    padding: 40px 20px;
 }
 
-/* Sidebar */
-.sidebar {
-    flex: 0 0 280px;
-    position: sticky;
-    top: 60px;
-    height: fit-content;
+/* Header */
+.header {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
     text-align: center;
 }
 
-.profile-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 2px solid #eee;
-}
-
-.sidebar h1 {
-    font-size: 1.8em;
-    margin: 15px 0 10px;
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
     color: #1a1a1a;
+    font-weight: 600;
 }
 
-.position {
+.subtitle {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.email {
     font-size: 1em;
-    color: #666;
-    margin-bottom: 25px;
-    line-height: 1.4;
+    margin: 15px 0;
 }
 
-.contact-section {
-    text-align: center;
-    margin: 25px 0;
-    font-size: 0.9em;
-    color: #666;
-}
-
-.contact-section p {
-    margin: 10px 0;
-}
-
-.contact-section a {
+.email a {
     color: #0066cc;
 }
 
-.social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.social {
     margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.social-links a {
-    display: block;
-    padding: 8px 12px;
-    background-color: #f5f5f5;
+.social a {
+    padding: 6px 12px;
+    background-color: #f0f0f0;
     border-radius: 4px;
     font-size: 0.9em;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
 }
 
-.social-links a:hover {
-    background-color: #e8e8e8;
+.social a:hover {
+    background-color: #e0e0e0;
     text-decoration: none;
 }
 
-/* Main Content */
+/* Content Sections */
 .content {
-    flex: 1;
-    min-width: 0;
+    margin-bottom: 45px;
 }
 
 .content h2 {
-    font-size: 1.5em;
-    margin-top: 30px;
-    margin-bottom: 15px;
+    font-size: 1.6em;
+    margin-bottom: 20px;
     color: #1a1a1a;
     padding-bottom: 10px;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid #0066cc;
+    display: inline-block;
 }
 
-.content section {
-    margin-bottom: 30px;
-}
-
-.content > section:first-child h2 {
-    margin-top: 0;
-}
-
-/* Bio Section */
-#bio p {
+.content > p {
     text-align: justify;
     line-height: 1.8;
     margin-bottom: 15px;
     color: #444;
 }
 
-/* Education List */
-.education-list {
-    list-style: none;
-    padding: 0;
-}
-
-.education-list li {
+/* Entry (Education, Experience) */
+.entry {
     margin-bottom: 25px;
     padding-bottom: 20px;
     border-bottom: 1px solid #f0f0f0;
 }
 
-.education-list li:last-child {
+.entry:last-child {
     border-bottom: none;
 }
 
-.education-list strong {
-    font-size: 1.05em;
+.entry-title {
+    font-weight: 600;
     color: #1a1a1a;
-}
-
-.education-list em {
-    color: #0066cc;
-    font-style: italic;
-}
-
-.education-list em + b,
-.education-list em + br + br + b {
-    color: #666;
-    font-size: 0.9em;
-}
-
-/* Experience List */
-.experience-list {
-    list-style: none;
-    padding: 0;
-}
-
-.experience-list li {
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.experience-list li:last-child {
-    border-bottom: none;
-}
-
-.experience-list strong {
     font-size: 1.05em;
-    color: #1a1a1a;
-    display: block;
     margin-bottom: 5px;
 }
 
-.experience-list em {
+.entry-info {
     color: #0066cc;
-    font-style: italic;
-    display: block;
     font-size: 0.95em;
     margin-bottom: 8px;
 }
 
-.experience-list li > *:last-child {
+.entry-detail {
     color: #666;
     line-height: 1.6;
+    margin: 0;
 }
 
-/* Awards List */
-.awards-list {
+/* Publications */
+.publication {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #0066cc;
+    border-radius: 3px;
+}
+
+.publication p {
+    margin: 0;
+    color: #555;
+    line-height: 1.7;
+}
+
+.publication strong {
+    color: #1a1a1a;
+}
+
+.publication em {
+    color: #666;
+}
+
+.publication a {
+    color: #0066cc;
+}
+
+/* Award List */
+.award-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.awards-list li {
+.award-list li {
     margin: 12px 0;
     padding: 10px 15px;
     background-color: #f9f9f9;
     border-left: 3px solid #0066cc;
     color: #666;
+    border-radius: 3px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+    color: #999;
+    font-size: 0.9em;
+}
+
+.footer p {
+    margin: 0;
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
-    .main-container {
-        flex-direction: column;
-        gap: 30px;
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
     }
 
-    .sidebar {
-        position: static;
-        flex: 1;
-        border-bottom: 2px solid #f0f0f0;
-        padding-bottom: 30px;
+    .header h1 {
+        font-size: 1.8em;
     }
 
-    .profile-image {
-        width: 150px;
-        height: 150px;
-    }
-}
-
-@media (max-width: 600px) {
-    .main-container {
-        padding: 15px 10px;
+    .subtitle {
+        font-size: 0.95em;
     }
 
-    .nav-container {
-        flex-wrap: wrap;
-        padding: 0 10px;
+    .nav-content {
+        gap: 15px;
+        padding: 12px 15px;
     }
 
-    .nav-brand {
-        margin-right: 15px;
-        padding-right: 15px;
-        flex: 0 0 auto;
+    .social {
+        gap: 10px;
     }
 
-    .nav-item {
-        padding: 10px 8px;
+    .social a {
+        padding: 5px 10px;
         font-size: 0.85em;
     }
 
-    .sidebar h1 {
-        font-size: 1.4em;
+    .content h2 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px 10px;
     }
 
-    .profile-image {
-        width: 120px;
-        height: 120px;
+    .header h1 {
+        font-size: 1.5em;
+    }
+
+    .subtitle {
+        font-size: 0.9em;
+    }
+
+    .nav-content {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-content a {
+        font-size: 0.8em;
+        padding: 4px 8px;
+    }
+
+    .social {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .social a {
+        display: block;
+        text-align: center;
     }
 
     .content h2 {
         font-size: 1.2em;
-    }
-
-    .education-list li,
-    .experience-list li {
-        margin-bottom: 15px;
-        padding-bottom: 15px;
     }
 }
